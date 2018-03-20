@@ -7,8 +7,7 @@ const styles={
   property : {
     width: '80%',
     padding: 50,
-    maxHeight: 200,
-      border:"2px solid #898f99"
+    maxHeight: 200
   },
   img:{
     float: "left"
@@ -50,10 +49,11 @@ export default class Main extends React.Component{
             {
                 this.state.properties.map(prop =>{
                     return(
-                        <ul className="list-group">
-                            <li className="list-group-item"><Property id={prop.id} title={prop.title} add={prop.address} img={prop.picture}/></li>
-                        </ul>
-
+                        <div className="container">
+                            <ul className="list-group">
+                                <li className="list-group-item"><Property id={prop.id} title={prop.title} add={prop.address} img={prop.picture}/></li>
+                            </ul>
+                        </div>
                     )
                 })
             }
